@@ -7,6 +7,13 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
+    search = params[:search].nil? ? '' : params[:search].downcase
+    @tasks = Task.where("LOWER(client_name) LIKE ?", "%#{search}%")
+    respond_to do |format|
+      format.js {}
+      format.html {}
+    end
+
   end
 
   # GET /tasks/1

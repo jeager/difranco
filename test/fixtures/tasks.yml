@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client_name: MyString
+  value: 
+  discount: 
+  final_value: 
+  status: MyString
+
+two:
+  client_name: MyString
+  value: 
+  discount: 
+  final_value: 
+  status: MyString

@@ -51,3 +51,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: difranco
+
+development:
+  <<: *default
+  database: difranco_development

@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20161030190516) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "products", force: true do |t|
     t.float    "cost_value"
     t.float    "sale_value"
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 20161030190516) do
     t.datetime "updated_at"
   end
 
-  add_index "tasks_products", ["product_id"], name: "index_tasks_products_on_product_id"
-  add_index "tasks_products", ["task_id"], name: "index_tasks_products_on_task_id"
+  add_index "tasks_products", ["product_id"], name: "index_tasks_products_on_product_id", using: :btree
+  add_index "tasks_products", ["task_id"], name: "index_tasks_products_on_task_id", using: :btree
 
 end

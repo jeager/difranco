@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
     $("#tasks_products_container").on('cocoon:before-insert', function(e, insertedItem) {
         var hidden_id = insertedItem[0].childNodes[3].childNodes[3].id;
         var product_id = "product_name_" + Math.round(Math.random() * 10000000);

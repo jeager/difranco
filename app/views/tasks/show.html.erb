@@ -6,6 +6,12 @@
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:client_name) %>:</strong></dt>
   <dd><%= @task.client_name %></dd>
+
+
+  <dt><strong><%= "Produtos" %>:</strong></dt>
+  <dd><%= render partial: 'tasks_products', locals: {task: @task}%></dd>
+
+
   <dt><strong><%= model_class.human_attribute_name(:value) %>:</strong></dt>
   <dd><%= @task.value %></dd>
   <dt><strong><%= model_class.human_attribute_name(:discount) %>:</strong></dt>

@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Produto</th>
+      <th>Quantidade</th>
+      <th>Nome do Arquivo</th>
+      <th>Observaçao</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @task.tasks_products.each do |tp| %>
+      <tr>
+        <td><%=tp.product.name%></td>
+        <td><%= tp.quantity %></td>
+        <td><%= tp.file_name %></td>
+        <td><%= tp.obs %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

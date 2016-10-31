@@ -4,7 +4,15 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    search = params[:search]
+    @products = Product.where("name LIKE ?", "%#{search}%")
+    @products.each do |p|
+      puts p.name
+    end
+    respond_to do |format|
+      format.js {}
+      format.html {}
+    end
   end
 
   # GET /products/1

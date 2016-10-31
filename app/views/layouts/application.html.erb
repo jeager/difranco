@@ -7,9 +7,11 @@
 		<%= csrf_meta_tags %>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Produtos</a></li>
-				<li><a href="#">Vendas</a></li>
+				<li class="active"><a href="/">Home</a></li>
+				<li><%= link_to t('.new', :default => t("Produtos")),
+				products_path%></li>
+				<li><%= link_to t('.new', :default => t("Vendas")),
+				tasks_path%></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>

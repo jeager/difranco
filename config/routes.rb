@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   resources :products
+
+  get 'products/search', to: 'products#search'
     
   resources :tasks do
     get :autocomplete_product_name, :on => :collection
